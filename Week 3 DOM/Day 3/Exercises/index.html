@@ -1,0 +1,147 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 style="display:none;"">The sales end in 10min ! </h1>
+        <script>
+            
+            function sayHi() {
+            let h1 = document.querySelector('h1');
+            h1.style.display = 'block';
+            }             
+            setTimeout(sayHi, 5000 );
+
+
+        </script>
+    </body>
+</html>
+-->
+
+<!--
+<p id="demo"></p>
+
+<button onclick="myStopFunction()">Stop time</button>
+
+<script>
+let timer = setInterval(myTimer, 1000);
+
+function myTimer() {
+  let date = new Date();
+  let time = date.toLocaleTimeString();
+  // date.toLocaleTimeString() returns a string with a language sensitive representation of the time portion of this date
+  document.getElementById("demo").innerHTML = time;
+}
+
+function myStopFunction() {
+  clearInterval(timer);
+}
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style=""></h1>
+	<p id="demo"></p>
+	<button onclick="myStopFunction()">Stop time</button>
+	<script type="text/javascript">
+		let t = 10;
+		let timer2 = setInterval(displayH1, 1000);
+		function displayH1(){
+			let h1 = document.querySelector('h1');
+			h1.innerHTML=`The sales end in ${t} secondes`;
+			//h1.style.display='block';
+			t--;//t=t-1
+			if (t<0) {
+			clearInterval(timer2);
+		}
+		};
+		//var timer = setTimeout(displayH1, 5000);
+		//var timer1 = setInterval(function(){alert('Hellooo');}, 2000);
+		//console.log(timer1);
+		//clearTimeout(timer);
+		//let timer = setInterval(myTimer, 2000);
+		//console.log(timer);
+		function myTimer() {
+		  let date = new Date();
+		  let time = date.toLocaleTimeString();
+		  // date.toLocaleTimeString() returns a string with a language sensitive representation of the time portion of this date
+		  document.getElementById("demo").innerHTML = time;
+		}
+		function myStopFunction() {
+		  clearInterval(timer);
+		  document.getElementById("demo").innerHTML ='';
+		}
+		  //clearInterval(timer1);
+	</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>  
+     <p draggable="true" ondragstart="drag(event)" id="benie"> A Deplacer</p>
+<div style="border: 2px solid blue; width: 100px; height: 100px;"
+     ondrop="Drop(event)" ondragover="dragover(event)" ondragenter="dragenter(event)">square3</div>
+    
+     <script type="text/javascript">
+     let text = document.getElementById('benie');
+    function drag(event){
+        event.dataTransfer.setData('text', event.target.id);
+        console.log(event.target);
+    }
+    function dragover(event){
+        event.preventDefault();
+    }
+    function drop(event){
+
+        event.dataTransfer.getData('text');
+        event.target.appendChild(text);
+    }
+
+     </script>
+    </body>
+    </html>
+    -->
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <p><button onclick="myMove()">Click Me</button></p>
+        <div id="container">
+          <div id="animate"></div>
+        </div>
+
+        <script type="text/javascript">
+     
+ 
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+
+
+    {% for category,message in get_flashed_messages(with_categories=True) %}
+        <p class="alert-{{category}}">{{ message }}</p>
+    {% endfor %}
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{msg}}</h1>
+
+    {% for post in posts %}
+    <div><p>{{ post.author }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+<br><br><br><br><br><br>
+<form method="POST">
+{{ form.hidden_tag() }}
+
+{{ form.username.label }}
+{{ form.username(size=32) }}
+<br>
+{{ form.password.label }}
+{{ form.password(size=32) }}
+<br>
+{{ form.bio.label }}
+{{ form.bio(size=240) }}
+<br>
+{{ form.submit() }}
+</form>
+
+
+{% endblock %}
